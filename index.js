@@ -11,8 +11,8 @@ dotenv.config()
 app.use(express.json())
 app.use(cors(
     {
-        origin:"",
-        methods:{"POST" , "GET"}
+        origin:["https://crud-plum-two.vercel.app/"],
+        methods:["POST" , "GET"]
     }
 ))
 const PORT = process.env.PORT;
