@@ -9,7 +9,12 @@ const app = express();
 dotenv.config()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin:"",
+        methods:{"POST" , "GET"}
+    }
+))
 const PORT = process.env.PORT;
 Connection();
 
